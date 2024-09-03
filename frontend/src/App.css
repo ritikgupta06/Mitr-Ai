@@ -1,0 +1,14 @@
+/* Style for the heading class */
+.heading {
+  font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+  font-size: 3rem; /* Large font size for prominence */
+  font-weight: bold; /* Make the text bold */
+  color: #830000; /* Dark grey color for good contrast */
+  text-align: center; /* Center-align the text */
+  margin: 20px 0; /* Add some vertical spacing */
+  padding: 10px; /* Add some padding for better spacing */
+  border-bottom: 2px solid #007bff; /* Add a bottom border for emphasis */
+  max-width: 100%; /* Limit the width to 80% of the container */
+  line-height: 1.2; /* Improve readability with a comfortable line height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a lifted effect */
+}

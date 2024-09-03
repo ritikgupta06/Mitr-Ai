@@ -1,0 +1,84 @@
+/* ContentDisplay.css */
+
+/* Ensure the page takes up full height */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the entire page */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  /* Empty state container */
+  .empty-state {
+    color: #888;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Content display area */
+  .content-display {
+    margin: 20px;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  /* Input field styling */
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Container for input and button */
+  .input-container {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
