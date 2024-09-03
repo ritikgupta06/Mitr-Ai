@@ -26,7 +26,11 @@ const ContentDisplay = () => {
   };
 
   return (<>
+<div class="header-container">
   <h1 class="heading">Mitra Ai</h1>
+  <div class="icon"></div>
+</div>
+
     <div className="container">
       {loading ? (
         <div className="loading"></div> // Display loading symbol

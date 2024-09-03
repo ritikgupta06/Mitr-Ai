@@ -43,7 +43,7 @@ input[type="text"] {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    background-color: rgb(70, 4, 124);
+    background-color: rgb(71, 3, 215);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -52,7 +52,7 @@ input[type="text"] {
 
 /* Button hover effect */
 .btn:hover {
-    background-color: rgb(66, 1, 79);
+    background-color: rgb(44, 0, 155);
 }
 
 /* Container for input and button */
@@ -129,13 +129,15 @@ input[type="text"] {
         padding: 8px 10px;
     }
 }
-
-
-.heading {
+.icon{
+    width: 45px;
+    height: 45px;
     background-image: url('/mitraAI.svg'); /* Path to your icon */
-    background-repeat: no-repeat;
-    background-position: center left; /* Position the icon on the left, centered vertically */
-    background-size: 40px 40px; /* Adjust size as needed */
-    padding-left: 50px; /* Space for the icon */
-    border-radius: 50%; /* Corrected property name to create rounded corners */
-  }
+    background-size: cover;
+}
+.header-container {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    justify-content: center; /* Horizontally centers the items */
+    margin: 20px;
+}

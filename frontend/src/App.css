@@ -1,10 +1,13 @@
 body {
-  background: linear-gradient(135deg, #42036f, #aa53fc); /* Creates a purple gradient background */
+  background: blueviolet; /* Creates a purple gradient background */
   height: 100vh; /* Ensures the body takes up the full viewport height */
   margin: 0; /* Removes default margin */
   padding: 0; /* Removes default padding */
   display: flex;
   flex-direction: column;
+  /* background-image: url('bg.jpg');
+  background-size: cover; */
+  
 
   
   color: white; /* Makes the text readable on the gradient background */
@@ -23,13 +26,5 @@ body {
  
   
 
-  .heading {
-    background-image: url('/mitraAI.svg'); /* Path to your icon */
-    background-repeat: no-repeat;
-    background-position: center left; /* Position the icon on the left, centered vertically */
-    background-size: 40px 40px; /* Adjust size as needed */
-    padding-left: 50px; /* Space for the icon */
-    border-radius: 50%; /* Corrected property name to create rounded corners */
-  }
   
 }
