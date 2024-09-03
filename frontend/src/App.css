@@ -1,14 +1,35 @@
-/* Style for the heading class */
+body {
+  background: linear-gradient(135deg, #42036f, #aa53fc); /* Creates a purple gradient background */
+  height: 100vh; /* Ensures the body takes up the full viewport height */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  display: flex;
+  flex-direction: column;
+
+  
+  color: white; /* Makes the text readable on the gradient background */
+  font-family: monospace;
+}
+
+
 .heading {
-  font-family: 'Arial', sans-serif; /* Use a clean, modern font */
-  font-size: 3rem; /* Large font size for prominence */
-  font-weight: bold; /* Make the text bold */
-  color: #830000; /* Dark grey color for good contrast */
-  text-align: center; /* Center-align the text */
-  margin: 20px 0; /* Add some vertical spacing */
-  padding: 10px; /* Add some padding for better spacing */
-  border-bottom: 2px solid #007bff; /* Add a bottom border for emphasis */
-  max-width: 100%; /* Limit the width to 80% of the container */
-  line-height: 1.2; /* Improve readability with a comfortable line height */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a lifted effect */
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+ 
+  
+
+  .heading {
+    background-image: url('/mitraAI.svg'); /* Path to your icon */
+    background-repeat: no-repeat;
+    background-position: center left; /* Position the icon on the left, centered vertically */
+    background-size: 40px 40px; /* Adjust size as needed */
+    padding-left: 50px; /* Space for the icon */
+    border-radius: 50%; /* Corrected property name to create rounded corners */
+  }
+  
 }

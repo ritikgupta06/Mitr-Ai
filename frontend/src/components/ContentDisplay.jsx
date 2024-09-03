@@ -5,30 +5,46 @@ import './ContentDisplay.css';
 const ContentDisplay = () => {
   const [content, setContent] = useState(null);
   const [question, setQuestion] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleFetchContent = async () => {
+    setLoading(true); 
     try {
       const response = await axios.post('http://localhost:3000/api/content', { question });
       setContent(response.data.result);
     } catch (error) {
       console.error('Error fetching content:', error);
+    } finally {
+      setLoading(false); 
     }
   };
 
-  return (
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleFetchContent();
+    }
+  };
+
+  return (<>
+  <h1 class="heading">Mitra Ai</h1>
     <div className="container">
-      {!content && <div className="empty-state">Ask your Mitr to solve your problem</div>}
-      {content && <div className="content-display">{content}</div>}
+      {loading ? (
+        <div className="loading"></div> // Display loading symbol
+      ) : (
+        content && <div className="content-display">{content}</div>
+      )}
       <div className="input-container">
         <input 
           type="text" 
           value={question} 
           onChange={(e) => setQuestion(e.target.value)} 
-          placeholder="Enter your question"
+          placeholder="Ask your Mitra to solve your problem"
+          onKeyDown={handleKeyPress}
         />
-        <button onClick={handleFetchContent}>Send</button>
+        <button className="btn" onClick={handleFetchContent}>Send</button>
       </div>
     </div>
+    </>
   );
 };
 

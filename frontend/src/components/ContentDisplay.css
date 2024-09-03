@@ -1,76 +1,62 @@
-/* ContentDisplay.css */
-
 /* Ensure the page takes up full height */
-body, html {
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Container for the entire page */
-  .container {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container for the entire page */
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #f5f5f5;
-  }
-  
-  /* Empty state container */
-  .empty-state {
-    color: #888;
-    font-size: 18px;
-    text-align: center;
-    margin: 20px;
-  }
-  
-  /* Content display area */
-  .content-display {
+}
+
+/* Content display area */
+.content-display {
     margin: 20px;
     max-width: 600px;
     width: 100%;
+    height: auto;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-size: 18px;
-  }
-  
-  /* Input field styling */
-  input[type="text"] {
+    word-wrap: break-word; /* Ensure long text wraps properly */
+}
+
+/* Input field styling */
+input[type="text"] {
     width: 100%;
-    max-width: 400px;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-right: 10px;
-  }
-  
-  /* Button styling */
-  button {
+}
+
+/* Button styling */
+.btn {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    background-color: #007bff;
+    background-color: rgb(70, 4, 124);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  /* Button hover effect */
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Container for input and button */
-  .input-container {
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: rgb(66, 1, 79);
+}
+
+/* Container for input and button */
+.input-container {
     position: fixed;
     bottom: 20px;
     display: flex;
@@ -80,5 +66,76 @@ body, html {
     max-width: 600px;
     padding: 0 20px;
     box-sizing: border-box;
+}
+
+/* Loading spinner */
+.loading {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-left-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Adjust content display font size for smaller screens */
+    .content-display {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    /* Adjust input field and button size for smaller screens */
+    input[type="text"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* Reduce margin and padding for smaller screens */
+    .container {
+        padding: 10px;
+    }
+
+    .input-container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .content-display {
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+
+.heading {
+    background-image: url('/mitraAI.svg'); /* Path to your icon */
+    background-repeat: no-repeat;
+    background-position: center left; /* Position the icon on the left, centered vertically */
+    background-size: 40px 40px; /* Adjust size as needed */
+    padding-left: 50px; /* Space for the icon */
+    border-radius: 50%; /* Corrected property name to create rounded corners */
   }
-  
