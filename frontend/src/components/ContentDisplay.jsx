@@ -10,7 +10,7 @@ const ContentDisplay = () => {
   const handleFetchContent = async () => {
     setLoading(true); 
     try {
-      const response = await axios.post('https://mitr-ai-1.onrender.com/api/question', { question });
+      const response = await axios.post('https://mitr-ai-1.onrender.com/api/content', { question });
       setContent(response.data.result);
     } catch (error) {
       console.error('Error fetching content:', error);
