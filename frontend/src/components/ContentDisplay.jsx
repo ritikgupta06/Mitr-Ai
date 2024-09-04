@@ -10,7 +10,7 @@ const ContentDisplay = () => {
   const handleFetchContent = async () => {
     setLoading(true); 
     try {
-      const response = await axios.post('https://mitr-ai-1.onrender.com', { question });
+      const response = await axios.post('https://mitr-ai-1.onrender.com/api/question', { question });
       setContent(response.data.result);
     } catch (error) {
       console.error('Error fetching content:', error);
@@ -26,9 +26,9 @@ const ContentDisplay = () => {
   };
 
   return (<>
-<div class="header-container">
-  <h1 class="heading">Mitra Ai</h1>
-  <div class="icon"></div>
+<div className="header-container">
+  <h1 className="heading">Mitra Ai</h1>
+  <div className="icon"></div>
 </div>
 
     <div className="container">
